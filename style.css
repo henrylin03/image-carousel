@@ -45,5 +45,10 @@ button.control {
 
 .navigation button {
   background-color: white;
+  opacity: .3;
   border-radius: 25px;
+}
+
+.navigation button.selected {
+  opacity: 1;
 }
