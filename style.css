@@ -45,7 +45,9 @@ button.right {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 30px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 28px;
   gap: 25px;
 }
 
