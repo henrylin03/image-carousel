@@ -18,8 +18,8 @@ main {
 }
 
 .carousel {
-  width: 50dvw;
-  height: 65dvh;
+  width: 2500px;
+  height: calc(3338px / 2);
   margin: 0 auto;
   display: grid;
   grid-template-rows: 5fr 1fr;
@@ -39,8 +39,8 @@ main {
 }
 
 button.control {
-  height: 125px;
-  width: 125px;
+  height: 35px;
+  width: 35px;
   padding: 5px;
   border-radius: 50%;
   grid-row: 1 / -1;
@@ -51,17 +51,10 @@ button.control {
   grid-column: 1 / 2;
 }
 
-.left img {
-  margin-right: 5px;
-}
-
 .right {
   grid-column-start: -2;
 }
 
-.right img {
-  margin-left: 5px;
-}
 
 .navigation {
   grid-column: 2 / 3;
