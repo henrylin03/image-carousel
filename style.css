@@ -25,7 +25,7 @@ main {
   border-radius: 20px;
   display: grid;
   grid-template-rows: 5fr 1fr;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 button.control {
@@ -35,9 +35,12 @@ button.control {
 }
 
 .navigation {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  padding: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 25px;
+  gap: 25px;
 }
 
 .navigation button {
