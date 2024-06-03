@@ -60,10 +60,11 @@ button.right {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 70%;
-  margin: 0 auto;
+  width: 50%;
+  height: 30%;
+  margin: auto;
   padding: 28px;
-  gap: 25px;
+  gap: 75px;
 }
 
 .navigation button {
