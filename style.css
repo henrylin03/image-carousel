@@ -18,12 +18,12 @@ main {
 }
 
 .carousel {
-  width: 2500px;
-  height: calc(3338px / 2);
+  width: min(50vw, 3500px);
+  height: min(75vh, 2500px);
   margin: 0 auto;
   display: grid;
   grid-template-rows: 5fr 1fr;
-  grid-template-columns: 1fr 9fr 1fr;
+  grid-template-columns: 10% 80% 10%;
 }
 
 .images {
@@ -39,8 +39,8 @@ main {
 }
 
 button.control {
-  height: 35px;
-  width: 35px;
+  height: min(80px, 3vh);
+  width: min(80px, 3vh);
   padding: 5px;
   border-radius: 50%;
   grid-row: 1 / -1;
@@ -61,7 +61,7 @@ button.control {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 50%;
+  width: 60%;
   height: 30%;
   margin: auto;
   padding: 28px;
