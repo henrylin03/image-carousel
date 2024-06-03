@@ -19,7 +19,7 @@ main {
 
 .carousel {
   width: 50dvw;
-  height: 60dvh;
+  height: 65dvh;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 5fr 1fr;
