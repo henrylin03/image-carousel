@@ -33,3 +33,14 @@ button.control {
   width: 50px;
   border-radius: 50%;
 }
+
+.navigation {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  padding: 20px;
+}
+
+.navigation button {
+  width: 100%;
+  background-color: white;
+}
