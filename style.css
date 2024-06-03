@@ -7,3 +7,10 @@
 button {
   font: inherit;
 }
+
+.carousel {
+  background-color: lightblue;
+  width: 50dvw;
+  height: 50dvh;
+  margin: 0 auto;
+}
