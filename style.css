@@ -28,6 +28,10 @@ main {
   grid-template-columns: 1fr 9fr 1fr;
 }
 
+.images img {
+  width: 500px;
+}
+
 button.control {
   height: 35px;
   width: 35px;
