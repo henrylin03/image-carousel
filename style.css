@@ -38,20 +38,28 @@ main {
 }
 
 button.control {
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
   padding: 5px;
   border-radius: 50%;
   grid-row: 1 / -1;
   place-self: center;
 }
 
-button.left {
+.left {
   grid-column: 1 / 2;
 }
 
-button.right {
+.left img {
+  margin-right: 5px;
+}
+
+.right {
   grid-column-start: -2;
+}
+
+.right img {
+  margin-left: 5px;
 }
 
 .navigation {
