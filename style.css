@@ -34,6 +34,10 @@ button.control {
   border-radius: 50%;
 }
 
+button.right {
+  grid-column-start: -2;
+}
+
 .navigation {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
