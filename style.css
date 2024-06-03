@@ -39,11 +39,11 @@ button.control {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding: 25px;
+  padding: 30px;
   gap: 25px;
 }
 
 .navigation button {
-  width: 100%;
   background-color: white;
+  border-radius: 25px;
 }
