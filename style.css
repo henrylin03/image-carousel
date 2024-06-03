@@ -61,11 +61,11 @@ button.control {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 60%;
+  width: max(50%, 25vw);
   height: 30%;
   margin: auto;
-  padding: 28px;
-  gap: 75px;
+  padding: min(28px, 1vw);
+  gap: min(75px, 2vw);
 }
 
 .navigation button {
