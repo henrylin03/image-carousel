@@ -25,13 +25,15 @@ main {
   border-radius: 20px;
   display: grid;
   grid-template-rows: 5fr 1fr;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 9fr 1fr;
 }
 
 button.control {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  grid-row: 1 / -1;
+  place-self: center;
 }
 
 button.right {
