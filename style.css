@@ -8,6 +8,12 @@ button {
   font: inherit;
 }
 
+main {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+}
+
 .carousel {
   background-color: lightblue;
   width: 50dvw;
