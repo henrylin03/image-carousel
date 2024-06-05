@@ -24,12 +24,13 @@ main {
   display: grid;
   grid-template-rows: 5fr 1fr;
   grid-template-columns: 10% 80% 10%;
+  overflow: hidden;
 }
 
 .images {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  overflow: hidden;
+  transform: translateY(-1225px);
 }
 
 .images img {
@@ -49,10 +50,12 @@ button.control {
 
 .left {
   grid-column: 1 / 2;
+  z-index: 999;
 }
 
 .right {
   grid-column-start: -2;
+  z-index: 999;
 }
 
 
@@ -66,6 +69,7 @@ button.control {
   margin: auto;
   padding: min(28px, 1vw);
   gap: min(75px, 2vw);
+  z-index: 999;
 }
 
 .navigation button {
