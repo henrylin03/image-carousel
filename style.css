@@ -67,7 +67,7 @@ button.control {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: max(50%, 25vw);
-  height: 30%;
+  height: max(40%, 50px);
   margin: auto;
   padding: min(28px, 1vw);
   gap: min(75px, 2vw);
