@@ -18,8 +18,8 @@ main {
 }
 
 .carousel {
-  width: min(50vw, 3500px);
-  height: min(75vh, 2500px);
+  width: min(80%, 3500px);
+  height: min(75%, 2500px);
   margin: 0 auto;
   display: grid;
   grid-template-rows: 5fr 1fr;
