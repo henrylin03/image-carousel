@@ -2,9 +2,6 @@ const imagesViewer = document.querySelector(".images-viewer");
 const leftBtn = document.querySelector(".left");
 const rightBtn = document.querySelector(".right");
 
-// for clarity, use utility function to calculate whether it is -100% translateX on .images in css (index 1), -200% translateX for index 2 etc etc
-
-// nb: it might be good to know how many total images there are at any given time
 const allImages = imagesViewer.children;
 const imagesCount = allImages.length;
 let currentIdx = 0;
@@ -15,12 +12,9 @@ function show(idx) {
   console.log(idx);
 }
 
-// displaying the image is as simple as just shifting the transform: translateX
-
 function showPrevious() {
   if (currentIdx === 0) return;
   currentIdx--;
-  console.log(currentIdx);
   show(currentIdx);
 }
 
