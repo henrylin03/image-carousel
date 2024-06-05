@@ -17,7 +17,9 @@ function showPrevious() {
 }
 
 function showNext() {
-  console.log("next");
+  if (currentIdx === images.length - 1) return;
+  currentIdx++;
+  console.log(currentIdx);
   return;
 }
 
