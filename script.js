@@ -17,21 +17,21 @@ function show(idx) {
 
 // displaying the image is as simple as just shifting the transform: translateX
 
-function showPrevious(currentImageIndex) {
-  if (currentImageIndex === 0) return;
-  currentImageIndex--;
-  console.log(currentImageIndex);
-  show(currentImageIndex);
+function showPrevious() {
+  if (currentIdx === 0) return;
+  currentIdx--;
+  console.log(currentIdx);
+  show(currentIdx);
 }
 
-function showNext(currentImageIndex) {
-  if (currentImageIndex === imagesCount - 1) return;
-  currentImageIndex++;
-  show(currentImageIndex);
+function showNext() {
+  if (currentIdx === imagesCount - 1) return;
+  currentIdx++;
+  show(currentIdx);
 }
 
-leftBtn.addEventListener("mousedown", () => showPrevious(currentIdx));
-rightBtn.addEventListener("mousedown", () => showNext(currentIdx));
+leftBtn.addEventListener("mousedown", showPrevious);
+rightBtn.addEventListener("mousedown", showNext);
 
 show(currentIdx);
 
