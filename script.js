@@ -6,8 +6,13 @@ console.log(images);
 
 // todo: if already at the very left, disable button, and vice versa
 
+// #1: have a 'current' index of the image being shown
+let currentIdx = 0;
+
 function showPrevious() {
-  console.log("previous");
+  if (currentIdx === 0) return;
+  currentIdx--;
+  console.log(currentIdx);
   return;
 }
 
