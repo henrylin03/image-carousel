@@ -2,7 +2,13 @@ const images = document.querySelector(".images").children;
 const leftBtn = document.querySelector(".left");
 const rightBtn = document.querySelector(".right");
 
-// #1: have a 'current' index of the image being shown
+// for clarity, use utility function to calculate whether it is -100% translateX on .images in css (index 1), -200% translateX for index 2 etc etc
+
+// nb: it might be good to know how many total images there are at any given time
+console.log(images.length);
+
+// displaying the image is as simple as just shifting the transform: translateX
+
 let currentIdx = 0;
 
 function show() {}
