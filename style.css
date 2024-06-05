@@ -27,7 +27,7 @@ main {
   overflow: hidden;
 }
 
-.images {
+.images-viewer {
   display: flex;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
