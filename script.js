@@ -1,32 +1,45 @@
 const imagesViewer = document.querySelector(".images-viewer");
 const leftBtn = document.querySelector(".left");
 const rightBtn = document.querySelector(".right");
+const navigationBtns = document.querySelector(".navigation").children;
 
 const allImages = imagesViewer.children;
 const imagesCount = allImages.length;
 let currentIdx = 0;
 
-function show(idx) {
-  if (idx < 0 || idx > imagesCount) return;
-  imagesViewer.style.transform = `translateX(-${idx * 100}%)`;
-  console.log(idx);
+function updateDisplay(idx) {
+  const showImg = () => {
+    if (idx < 0 || idx > imagesCount) return;
+    imagesViewer.style.transform = `translateX(-${idx * 100}%)`;
+  };
+
+  const updateNav = () => {
+    const selectedBtn = document.querySelector(".navigation .selected");
+    if (selectedBtn) selectedBtn.classList.remove("selected");
+    navigationBtns[idx].classList.add("selected");
+  };
+
+  // run
+  showImg();
+  updateNav();
 }
 
 function showPrevious() {
   if (currentIdx === 0) return;
   currentIdx--;
-  show(currentIdx);
+  updateDisplay(currentIdx);
 }
 
 function showNext() {
   if (currentIdx === imagesCount - 1) return;
   currentIdx++;
-  show(currentIdx);
+  updateDisplay(currentIdx);
 }
 
 leftBtn.addEventListener("mousedown", showPrevious);
 rightBtn.addEventListener("mousedown", showNext);
 
-show(currentIdx);
+// initialising
+updateDisplay(currentIdx);
 
 // todo: if already at the very left, disable button, and vice versa
