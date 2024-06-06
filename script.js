@@ -14,7 +14,9 @@ function updateDisplay(idx) {
   };
 
   const updateNav = () => {
-    // clear 'selected' class from all children of nav buttons
+    const selectedBtn = document.querySelector(".navigation .selected");
+    if (selectedBtn) selectedBtn.classList.remove("selected");
+    navigationBtns[idx].classList.add("selected");
   };
 
   // run
