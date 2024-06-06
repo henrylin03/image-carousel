@@ -1,6 +1,7 @@
 const imagesViewer = document.querySelector(".images-viewer");
 const leftBtn = document.querySelector(".left");
 const rightBtn = document.querySelector(".right");
+const navigationBtns = document.querySelector(".navigation").children;
 
 const allImages = imagesViewer.children;
 const imagesCount = allImages.length;
