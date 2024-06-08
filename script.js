@@ -29,7 +29,7 @@ const updateDisplay = (idx) => {
   disableArrowBtnsAtEnds();
 
   clearTimeout(timeoutId);
-  timeoutId = autoPlaySlides();
+  if (idx !== idxOfLastImg) timeoutId = autoPlaySlides();
 };
 
 const showPrevious = () => {
