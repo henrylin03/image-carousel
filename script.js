@@ -10,7 +10,7 @@ let currentIdx = 0;
 const attachDataAttributeToNavButtons = () =>
   [...navigationBtns].forEach((btn, idx) => (btn.dataset.idx = idx));
 
-function updateDisplay(idx) {
+const updateDisplay = (idx) => {
   const showImg = () => {
     if (idx < 0 || idx > imagesCount) return;
     imagesViewer.style.transform = `translateX(-${idx * 100}%)`;
@@ -24,19 +24,19 @@ function updateDisplay(idx) {
 
   showImg();
   updateNav();
-}
+};
 
-function showPrevious() {
+const showPrevious = () => {
   if (currentIdx === 0) return;
   currentIdx--;
   updateDisplay(currentIdx);
-}
+};
 
-function showNext() {
+const showNext = () => {
   if (currentIdx === imagesCount - 1) return;
   currentIdx++;
   updateDisplay(currentIdx);
-}
+};
 
 leftBtn.addEventListener("mousedown", showPrevious);
 rightBtn.addEventListener("mousedown", showNext);
