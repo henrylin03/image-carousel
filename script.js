@@ -26,29 +26,21 @@ const updateDisplay = (idx) => {
   currentIdx = idx;
   showImg();
   updateNav();
-  disableArrowBtnsAtEnds();
 
   clearTimeout(timeoutId);
   if (idx !== idxOfLastImg) timeoutId = autoPlaySlides();
 };
 
 const showPrevious = () => {
-  if (currentIdx === 0) return;
   currentIdx--;
+  console.log(currentIdx);
   updateDisplay(currentIdx);
 };
 
 const showNext = () => {
-  if (currentIdx === imagesCount - 1) return;
   currentIdx++;
+  console.log(currentIdx);
   updateDisplay(currentIdx);
-};
-
-const disableArrowBtnsAtEnds = () => {
-  if (currentIdx === 0) return (leftBtn.disabled = true);
-  if (currentIdx === idxOfLastImg) return (rightBtn.disabled = true);
-  leftBtn.disabled = false;
-  rightBtn.disabled = false;
 };
 
 // event listeners
