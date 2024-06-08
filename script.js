@@ -19,7 +19,6 @@ function updateDisplay(idx) {
     navigationBtns[idx].classList.add("selected");
   };
 
-  // run
   showImg();
   updateNav();
 }
