@@ -24,6 +24,8 @@ const updateDisplay = (idx) => {
   showImg();
   updateNav();
   disableArrowBtnsAtEnds();
+
+  setTimeout(showNext, 5000);
 };
 
 const showPrevious = () => {
