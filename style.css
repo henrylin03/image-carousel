@@ -11,6 +11,10 @@ button {
   outline: none;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 main {
   height: 100dvh;
   display: flex;

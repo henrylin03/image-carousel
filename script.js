@@ -5,6 +5,7 @@ const navigationBtns = document.querySelector(".navigation").children;
 
 const allImages = imagesViewer.children;
 const imagesCount = allImages.length;
+const idxOfLastImg = imagesCount - 1;
 let currentIdx = 0;
 
 const updateDisplay = (idx) => {
@@ -19,9 +20,10 @@ const updateDisplay = (idx) => {
     navigationBtns[idx].classList.add("selected");
   };
 
+  currentIdx = idx;
   showImg();
   updateNav();
-  currentIdx = idx;
+  disableArrowBtnsAtEnds();
 };
 
 const showPrevious = () => {
@@ -36,6 +38,14 @@ const showNext = () => {
   updateDisplay(currentIdx);
 };
 
+const disableArrowBtnsAtEnds = () => {
+  if (currentIdx === 0) return (leftBtn.disabled = true);
+  if (currentIdx === idxOfLastImg) return (rightBtn.disabled = true);
+  leftBtn.disabled = false;
+  rightBtn.disabled = false;
+};
+
+// event listeners
 leftBtn.addEventListener("mousedown", showPrevious);
 rightBtn.addEventListener("mousedown", showNext);
 document.addEventListener("keydown", (e) => {
