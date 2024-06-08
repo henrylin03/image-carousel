@@ -38,6 +38,13 @@ const showNext = () => {
 
 leftBtn.addEventListener("mousedown", showPrevious);
 rightBtn.addEventListener("mousedown", showNext);
+document.addEventListener("keydown", (e) => {
+  const callback = {
+    ArrowLeft: showPrevious,
+    ArrowRight: showNext,
+  }[e.key];
+  callback?.();
+});
 [...navigationBtns].forEach((btn, idx) =>
   btn.addEventListener("mousedown", () => updateDisplay(idx))
 );
