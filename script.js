@@ -7,6 +7,9 @@ const allImages = imagesViewer.children;
 const imagesCount = allImages.length;
 let currentIdx = 0;
 
+const attachDataAttributeToNavButtons = () =>
+  [...navigationBtns].forEach((btn, idx) => (btn.dataset.idx = idx));
+
 function updateDisplay(idx) {
   const showImg = () => {
     if (idx < 0 || idx > imagesCount) return;
@@ -37,8 +40,10 @@ function showNext() {
 
 leftBtn.addEventListener("mousedown", showPrevious);
 rightBtn.addEventListener("mousedown", showNext);
+// navigationBtns.forEach(btn => btn.addEventListener("mousedown", ))
 
 // initialising
+attachDataAttributeToNavButtons();
 updateDisplay(currentIdx);
 
 // todo: if already at the very left, disable button, and vice versa
