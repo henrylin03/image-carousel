@@ -30,7 +30,7 @@ const updateDisplay = (idx) => {
   updateNav();
 
   clearTimeout(timeoutId);
-  if (idx !== idxOfLastImg) timeoutId = autoPlaySlides();
+  timeoutId = autoPlaySlides();
 };
 
 const showPrevious = () => {
