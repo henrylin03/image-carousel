@@ -10,7 +10,8 @@ let currentIdx = 0;
 let timeoutId;
 
 const updateDisplay = (idx) => {
-  idx = idx < 0 ? idx + imagesCount : idx % imagesCount;
+  const findImageIndexToLoopImages = () =>
+    idx < 0 ? idx + imagesCount : idx % imagesCount;
 
   const showImg = () =>
     (imagesViewer.style.transform = `translateX(-${idx * 100}%)`);
@@ -23,6 +24,7 @@ const updateDisplay = (idx) => {
 
   const autoPlaySlides = () => setTimeout(showNext, 5000);
 
+  idx = findImageIndexToLoopImages();
   currentIdx = idx;
   showImg();
   updateNav();
