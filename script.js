@@ -7,6 +7,7 @@ const allImages = imagesViewer.children;
 const imagesCount = allImages.length;
 const idxOfLastImg = imagesCount - 1;
 let currentIdx = 0;
+let timeoutId;
 
 const updateDisplay = (idx) => {
   const showImg = () => {
@@ -20,12 +21,15 @@ const updateDisplay = (idx) => {
     navigationBtns[idx].classList.add("selected");
   };
 
+  const autoPlaySlides = () => setTimeout(showNext, 5000);
+
   currentIdx = idx;
   showImg();
   updateNav();
   disableArrowBtnsAtEnds();
 
-  setTimeout(showNext, 5000);
+  clearTimeout(timeoutId);
+  timeoutId = autoPlaySlides();
 };
 
 const showPrevious = () => {
