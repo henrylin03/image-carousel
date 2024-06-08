@@ -10,15 +10,12 @@ let currentIdx = 0;
 let timeoutId;
 
 const updateDisplay = (idx) => {
-  idx = idx % imagesCount;
+  idx = idx < 0 ? idx + imagesCount : idx % imagesCount;
 
-  const showImg = () => {
-    if (idx < 0) return;
-    imagesViewer.style.transform = `translateX(-${idx * 100}%)`;
-  };
+  const showImg = () =>
+    (imagesViewer.style.transform = `translateX(-${idx * 100}%)`);
 
   const updateNav = () => {
-    if (idx < 0) return;
     const selectedBtn = document.querySelector(".navigation .selected");
     if (selectedBtn) selectedBtn.classList.remove("selected");
     navigationBtns[idx].classList.add("selected");
